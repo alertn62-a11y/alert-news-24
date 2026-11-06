@@ -1,0 +1,36 @@
+
+media:
+  input: media/news
+  output: /media/news
+
+content:
+  - name: news
+    label: ગુજરાતી સમાચાર
+    type: collection
+    path: data/news
+    format: json
+    filename: "{primary}.json"
+    view:
+      primary: title
+      fields:
+        - title
+        - date
+    fields:
+      - name: title
+        label: સમાચારનું હેડલાઇન
+        type: string
+        required: true
+
+      - name: date
+        label: તારીખ
+        type: date
+
+      - name: image
+        label: સમાચારનો ફોટો
+        type: image
+
+      - name: body
+        label: સમાચારની વિગત
+        type: rich-text
+
+        
